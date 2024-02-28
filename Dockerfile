@@ -16,6 +16,6 @@ USER webdriver
 
 ENTRYPOINT ["chromedriver"]
 
-CMD ["--port=4444", "--verbose", "--whitelisted-ips", "--log-path=/dev/stderr", "--disable-dev-shm-usage"]
+CMD ["--port=4444", "--verbose", "--allowed-origins=*", "--allowed-ips=", "--log-path=/dev/stderr", "--disable-dev-shm-usage"]
 
 EXPOSE 4444
