@@ -69,6 +69,12 @@ e.g.:
 FROM YOUR_ORG/basedriver:2021-09-27
 ```
 
+## Build
+
+```shell
+docker buildx build --platform linux/amd64,linux/arm64 --no-cache --push -t ghcr.io/atta-1/chromedriver:bookworm .
+```
+
 ## Software
 
 The following software is included in the `blueimp/chromedriver` image:
