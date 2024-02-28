@@ -14,7 +14,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 USER webdriver
 
-ENTRYPOINT ["chromedriver"]
+ENTRYPOINT ["entrypoint", "chromedriver"]
 
 CMD ["--port=4444", "--verbose", "--allowed-origins=*", "--allowed-ips=", "--log-path=/dev/stderr", "--disable-dev-shm-usage"]
 
