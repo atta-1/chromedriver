@@ -11,12 +11,12 @@ RUN echo -e "Types: deb\nURIs: http://deb.debian.org/debian\nSuites: bookworm bo
   && ((export | grep TARGETPLATFORM) || (echo "Missing TARGETPLATFORM" && exit 1)) \
   && ( \
     export ARCH=$(echo $TARGETPLATFORM | cut -d '/' -f2) \
-      && curl -O "https://ftp.debian.org/debian/pool/main/c/chromium/chromium-common_123.0.6312.122-1~deb12u1_$ARCH.deb" \
-      && curl -O "https://ftp.debian.org/debian/pool/main/c/chromium/chromium_123.0.6312.122-1~deb12u1_$ARCH.deb" \
-      && curl -O "https://ftp.debian.org/debian/pool/main/c/chromium/chromium-driver_123.0.6312.122-1~deb12u1_$ARCH.deb" \
-      && dpkg -i chromium-common_123.0.6312.122-1~deb12u1_$ARCH.deb || true \
-      && dpkg -i chromium_123.0.6312.122-1~deb12u1_$ARCH.deb || true \
-      && dpkg -i chromium-driver_123.0.6312.122-1~deb12u1_$ARCH.deb || true \
+      && curl -O "https://ftp.debian.org/debian/pool/main/c/chromium/chromium-common_125.0.6422.60-1~deb12u1_$ARCH.deb" \
+      && curl -O "https://ftp.debian.org/debian/pool/main/c/chromium/chromium_125.0.6422.60-1~deb12u1_$ARCH.deb" \
+      && curl -O "https://ftp.debian.org/debian/pool/main/c/chromium/chromium-driver_125.0.6422.60-1~deb12u1_$ARCH.deb" \
+      && dpkg -i chromium-common_125.0.6422.60-1~deb12u1_$ARCH.deb || true \
+      && dpkg -i chromium_125.0.6422.60-1~deb12u1_$ARCH.deb || true \
+      && dpkg -i chromium-driver_125.0.6422.60-1~deb12u1_$ARCH.deb || true \
       && apt install --fix-broken -y \
       && apt clean \
       && rm -rf /var/liexpb/apt/lists/* /tmp/* \

@@ -72,7 +72,7 @@ FROM YOUR_ORG/basedriver:2021-09-27
 ## Build
 
 ```shell
-docker buildx build --platform linux/amd64,linux/arm64 --no-cache --push -t ghcr.io/atta-1/chromedriver:123.0.6312.122-1 .
+docker buildx build --platform linux/amd64,linux/arm64 --no-cache --push -t ghcr.io/atta-1/chromedriver:125.0.6422.60-1 .
 #docker buildx build --platform linux/amd64 --no-cache --push -t ghcr.io/atta-1/chromedriver:122.0.6261.57 .
 ```
 
@@ -103,12 +103,8 @@ Released under the [MIT license](https://opensource.org/licenses/MIT).
 [Sebastian Tschan](https://blueimp.net/)
 
 
-webdriver@52ce15d695ca:~$ chromedriver --version
-ChromeDriver 123.0.6312.122 (31f8248cdd90acbac59f700b603fed0b5967ca50-refs/branch-heads/6312@{#824})
-webdriver@52ce15d695ca:~$ chromium --version
-Chromium 123.0.6312.122 built on Debian 12.5, running on Debian 12.5
-webdriver@52ce15d695ca:~$ uname
-Linux
-webdriver@52ce15d695ca:~$ uname -a
-Linux 52ce15d695ca 6.7.11-orbstack-00143-ge6b82e26cd22 #1 SMP Sat Mar 30 12:20:36 UTC 2024 aarch64 GNU/Linux
-webdriver@52ce15d695ca:~$
+$ chromedriver --version
+ChromeDriver 125.0.6422.60 (3ac3319bff9f3e139d632e3d195e3d2d43d86e37-refs/branch-heads/6422@{#1017})
+
+$ chromium --version
+Chromium 125.0.6422.60 built on Debian 12.5, running on Debian 12.5
