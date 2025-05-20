@@ -56,7 +56,7 @@ might break your tests inadvertently. For example:
 version: "3.7"
 services:
   chromedriver:
-    image: YOUR_ORG/chromedriver:2021-09-27
+    image: ghcr.io/atta-1/chromedriver:03012025
     # ...
 ```
 
@@ -66,13 +66,13 @@ image reference at the start of the `Dockerfile` in this repository accordingly,
 e.g.:
 
 ```Dockerfile
-FROM YOUR_ORG/basedriver:2021-09-27
+FROM ghcr.io/atta-1/basedriver:bookworm
 ```
 
 ## Build
 
 ```shell
-docker buildx build --platform linux/amd64,linux/arm64 --no-cache --push -t ghcr.io/atta-1/chromedriver:bookworm .
+docker buildx build --platform linux/amd64,linux/arm64 --push -t ghcr.io/atta-1/chromedriver:136.0.7103.113 .
 ```
 
 ## Software
